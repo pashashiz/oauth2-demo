@@ -1,0 +1,24 @@
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# IDEA
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+target/
+
+# overlays dir in csc-server-webapp module generates automatically
+overlays/
+
+# Other
+*.log

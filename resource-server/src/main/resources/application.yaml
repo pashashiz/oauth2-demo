@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: resource-server
+
+
+server:
+  port: ${PORT:8010}
+  contextPath: /${spring.application.name}
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:8000/oauth-server/user
+
+logging:
+  file: ${user.home}/asg/logs/${spring.application.name}-${server.port}.log
+
+debug: true

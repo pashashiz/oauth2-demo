@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: oauth-server
+
+server:
+  port: ${PORT:8000}
+  contextPath: /${spring.application.name}
+
+security:
+  user:
+    password: password
+  sessions: IF_REQUIRED
+  oauth2:
+    client:
+      clientId: acme
+      clientSecret: acmesecret
+      authorized-grant-types: authorization_code,refresh_token,implicit,password
+      scope: openid
+
+logging:
+  file: ${user.home}/asg/logs/${spring.application.name}-${server.port}.log
+
+debug: true
